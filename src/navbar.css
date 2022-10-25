@@ -1,0 +1,198 @@
+:root {
+  /*=======COLORS===========*/
+  --bg: #292929;
+  --element: #1a1a1a;
+  --inside: #242424;
+  --text-small: #b3b4b6;
+  --text-select: #666666;
+  --text: #ffffff;
+  --p: #bf7bfb;
+  --pv: #3700b3;
+  --s: #03dac5;
+  --sv: #018786;
+  --t: #ff6666;
+  --tv: #b00020;
+  /*=======CURSORS===========*/
+  --default: url("cursor/default.PNG"), auto;
+  --pointer: url("cursor/pointer.PNG"), auto;
+  --denied: url("cursor/nope.PNG"), auto;
+  --text1: url("cursor/text.PNG"), auto;
+  --move: url("cursor/move.PNG"), auto;
+  --vertical: url("cursor/vertical.PNG"), auto;
+  --horizontal: url("cursor/horizontal.PNG"), auto;
+  --diagonal1: url("cursor/diagonal\ 1.PNG"), auto;
+  --diagonal2: url("cursor/diagonal\ 2.PNG"), auto;
+  --precision: url("cursor/precision.PNG"), auto;
+  --question: url("cursor/question.PNG"), auto;
+  --busy: url("cursor/busy_a.GIF"), auto;
+  --handwriting: url("cursor/handwriting.PNG"), auto;
+  --text2: url("cursor/text2.PNG"), auto;
+  --alternative: url("cursor/alternativ.PNG"), auto;
+}
+@keyframes cursor {
+  0% {
+    cursor: url("cursor/busy/f00.png"), auto;
+  }
+  6% {
+    cursor: url("cursor/busy/f01.png"), auto;
+  }
+  12% {
+    cursor: url("cursor/busy/f02.png"), auto;
+  }
+  18% {
+    cursor: url("cursor/busy/f03.png"), auto;
+  }
+  24% {
+    cursor: url("cursor/busy/f04.png"), auto;
+  }
+  30% {
+    cursor: url("cursor/busy/f05.png"), auto;
+  }
+  36% {
+    cursor: url("cursor/busy/f06.png"), auto;
+  }
+  42% {
+    cursor: url("cursor/busy/f07.png"), auto;
+  }
+  48% {
+    cursor: url("cursor/busy/f08.png"), auto;
+  }
+  54% {
+    cursor: url("cursor/busy/f09.png"), auto;
+  }
+  60% {
+    cursor: url("cursor/busy/f10.png"), auto;
+  }
+  66% {
+    cursor: url("cursor/busy/f11.png"), auto;
+  }
+  72% {
+    cursor: url("cursor/busy/f12.png"), auto;
+  }
+  78% {
+    cursor: url("cursor/busy/f13.png"), auto;
+  }
+  86% {
+    cursor: url("cursor/busy/f14.png"), auto;
+  }
+  90% {
+    cursor: url("cursor/busy/f15.png"), auto;
+  }
+  100% {
+    cursor: url("cursor/busy/f00.png"), auto;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  cursor: url("projectsrc/cursor.png"), auto;
+  box-sizing: border-box;
+}
+
+/* ---------------- Navbar and burger menu ------------------ */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: var(--element);
+  display: flex;
+  justify-content: flex-start;
+  padding: 0.7em;
+}
+
+.burger-menu {
+  cursor: url("projectsrc/cursorlink.png"), auto;
+  height: 100%;
+  width: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.burger-bar {
+  cursor: url("projectsrc/cursorlink.png"), auto;
+  width: 3em;
+  height: 0.5em;
+  background-color: var(--t);
+  border-radius: 0.5em;
+}
+
+.menu {
+  position: fixed;
+  transition: 0.2s ease-in-out;
+  margin-bottom: 0px;
+  margin-top: 60px;
+  border-radius: 0 12px 12px 0;
+  height: calc(100vh - 90px);
+  background-color: var(--element);
+  width: 150px;
+  top: 0;
+  padding-top: 15px;
+  padding-left: 10px;
+  border: 2px solid var(--t);
+  border-left: none;
+}
+
+.iconimg {
+  position: absolute;
+  right: 10px;
+  height: 40px;
+}
+
+/* ------------- sliding menu ------------------ */
+.hidden {
+  left: -150px;
+}
+
+.visible {
+  left: 0px;
+}
+
+.shown {
+  left: 150px;
+}
+
+/* ----- animations--------- */
+/* clicked */
+.burger-bar.clicked:nth-child(1) {
+  transform: rotate(45deg) translate(0.3em, 0.8em);
+  transition: ease 0.5s;
+}
+
+.burger-bar.clicked:nth-child(2) {
+  transform: scale(0.01);
+  transition: ease 0.1s;
+}
+
+.burger-bar.clicked:nth-child(3) {
+  transform: rotate(135deg) translate(-0.5em, 1em);
+  transition: ease 0.5s;
+}
+
+/* unclicked */
+.burger-bar.unclicked {
+  transform: rotate(0) translate(0);
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+}
+ul {
+  list-style-type: none;
+}
+ul > li {
+  line-height: 40px;
+  height: 40px;
+}
+a.listlink {
+  transition: font-size 0.3s;
+  cursor: url("projectsrc/cursorlink.png"), auto;
+  color: var(--text-small);
+  text-decoration: none;
+  font-size: 18px;
+}
+a.listlink:hover {
+  color: var(--text-small);
+  font-size: 20px;
+  color: var(--t);
+}

@@ -1,0 +1,226 @@
+:root {
+  /*=======COLORS===========*/
+  --bg: #292929;
+  --element: #1a1a1a;
+  --inside: #242424;
+  --text-small: #b3b4b6;
+  --text-select: #666666;
+  --text: #ffffff;
+  --p: #bf7bfb;
+  --pv: #3700b3;
+  --s: #03dac5;
+  --sv: #018786;
+  --t: #ff6666;
+  --tv: #b00020;
+  /*=======CURSORS===========*/
+  --default: url("cursor/default.PNG"), auto;
+  --pointer: url("cursor/pointer.PNG"), auto;
+  --denied: url("cursor/nope.PNG"), auto;
+  --text1: url("cursor/text.PNG"), auto;
+  --move: url("cursor/move.PNG"), auto;
+  --vertical: url("cursor/vertical.PNG"), auto;
+  --horizontal: url("cursor/horizontal.PNG"), auto;
+  --diagonal1: url("cursor/diagonal\ 1.PNG"), auto;
+  --diagonal2: url("cursor/diagonal\ 2.PNG"), auto;
+  --precision: url("cursor/precision.PNG"), auto;
+  --question: url("cursor/question.PNG"), auto;
+  --busy: url("cursor/busy_a.GIF"), auto;
+  --handwriting: url("cursor/handwriting.PNG"), auto;
+  --text2: url("cursor/text2.PNG"), auto;
+  --alternative: url("cursor/alternativ.PNG"), auto;
+}
+@keyframes cursor {
+  0% {
+    cursor: url("cursor/busy/f00.png"), auto;
+  }
+  6% {
+    cursor: url("cursor/busy/f01.png"), auto;
+  }
+  12% {
+    cursor: url("cursor/busy/f02.png"), auto;
+  }
+  18% {
+    cursor: url("cursor/busy/f03.png"), auto;
+  }
+  24% {
+    cursor: url("cursor/busy/f04.png"), auto;
+  }
+  30% {
+    cursor: url("cursor/busy/f05.png"), auto;
+  }
+  36% {
+    cursor: url("cursor/busy/f06.png"), auto;
+  }
+  42% {
+    cursor: url("cursor/busy/f07.png"), auto;
+  }
+  48% {
+    cursor: url("cursor/busy/f08.png"), auto;
+  }
+  54% {
+    cursor: url("cursor/busy/f09.png"), auto;
+  }
+  60% {
+    cursor: url("cursor/busy/f10.png"), auto;
+  }
+  66% {
+    cursor: url("cursor/busy/f11.png"), auto;
+  }
+  72% {
+    cursor: url("cursor/busy/f12.png"), auto;
+  }
+  78% {
+    cursor: url("cursor/busy/f13.png"), auto;
+  }
+  86% {
+    cursor: url("cursor/busy/f14.png"), auto;
+  }
+  90% {
+    cursor: url("cursor/busy/f15.png"), auto;
+  }
+  100% {
+    cursor: url("cursor/busy/f00.png"), auto;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  cursor: url("projectsrc/cursor.png"), auto;
+}
+a {
+  cursor: url("projectsrc/cursorlink.png"), auto;
+}
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+.bottombar {
+  height: 30px;
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: var(--element);
+  display: grid;
+  place-items: center left;
+  grid-template-columns: 225px auto 80px 1px 80px;
+  padding-inline: 10px;
+  color: var(--text-small);
+  font-weight: 100;
+  font-size: 14px;
+  user-select: none;
+  z-index: 4;
+}
+.clock {
+  cursor: url("projectsrc/cursorlink.png"), auto;
+  height: 30px;
+  display: grid;
+  place-items: center start;
+  grid-template-columns: 25px auto;
+  padding-inline: 5px;
+}
+.clock > * {
+  cursor: url("projectsrc/cursorlink.png"), auto;
+}
+.svgbottombar > * {
+  cursor: url("projectsrc/cursorlink.png"), auto;
+}
+.bottombar::after {
+  content: "";
+  cursor: default;
+  height: 2px;
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: transparent;
+  z-index: 5;
+}
+.bottombar > .hover:hover {
+  background-color: var(--inside);
+  border-radius: 4px;
+}
+.svgbottombar {
+  font-size: 14px;
+  font-weight: 100;
+  height: 30px;
+  display: grid;
+  place-items: center start;
+  grid-template-columns: 24px 56px;
+  text-decoration: none;
+  color: var(--text-small);
+}
+.divider {
+  width: 1px;
+  background-color: var(--text-select);
+  height: 70%;
+}
+.svg {
+  height: 14px;
+}
+.page {
+  transition: 0.2s ease-in-out;
+  padding-top: 80px;
+  position: absolute;
+  padding-left: 20px;
+  text-align: left;
+}
+input {
+  cursor: url("projectsrc/cursorlink.png"), auto;
+  margin-top: 20px;
+  outline: none;
+  border: 1px solid var(--text-small);
+  border-radius: 4px;
+}
+.btn {
+  margin: 5px;
+  background-color: transparent;
+  color: var(--text);
+  outline: none;
+  padding: 4px;
+  border-radius: 4px;
+  border: 0px solid var(--text);
+}
+.btn:hover {
+  text-decoration: underline;
+}
+.btn:active {
+  color: var(--text-small);
+}
+h3 {
+  margin-top: 20px;
+}
+.item {
+  transition: .2s;
+  text-align: center;
+  width: 100%;
+  padding-top: 5px;
+  background-color: var(--inside);
+}
+.item:nth-child(even) {
+  background-color: var(--element);
+}
+.item:hover {
+  transform: scale(1.03);
+}
+.sidenav {
+  cursor: url("projectsrc/cursorlink.png"), auto;
+  position: absolute;
+  background-color: var(--element);
+  width: 150px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  text-align: left;
+  border-radius: 0 12px 12px 0;
+}
+.icon {
+  margin-top: 10px;
+  margin-inline: 20px;
+  width: 110px;
+  text-align: right;
+}
+.close {
+  display: none;
+}
