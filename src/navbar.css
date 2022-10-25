@@ -86,7 +86,7 @@
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  cursor: url("projectsrc/cursor.png"), auto;
+  cursor: var(--default);
   box-sizing: border-box;
 }
 
@@ -103,7 +103,7 @@ nav {
 }
 
 .burger-menu {
-  cursor: url("projectsrc/cursorlink.png"), auto;
+  cursor: var(--pointer);
   height: 100%;
   width: 3em;
   display: flex;
@@ -113,7 +113,7 @@ nav {
 }
 
 .burger-bar {
-  cursor: url("projectsrc/cursorlink.png"), auto;
+  cursor: var(--pointer);
   width: 3em;
   height: 0.5em;
   background-color: var(--t);
@@ -186,7 +186,7 @@ ul > li {
 }
 a.listlink {
   transition: font-size 0.3s;
-  cursor: url("projectsrc/cursorlink.png"), auto;
+  cursor: var(--pointer);
   color: var(--text-small);
   text-decoration: none;
   font-size: 18px;
