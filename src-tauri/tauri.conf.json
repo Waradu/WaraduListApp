@@ -65,7 +65,7 @@
         "x": 0,
         "y": 0,
         "decorations": true,
-        "alwaysOnTop": true
+        "alwaysOnTop": false
       }
     ]
   }

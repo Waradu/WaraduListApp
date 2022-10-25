@@ -32,7 +32,7 @@ export default function Bottombar() {
         </div>
         <div></div>
         <a
-          href="https://github.com/Waradu"
+          href="https://www.youtube.com/channel/UCLBeNVGJGc07l9v9K6p1xCQ"
           target="_blank"
           rel="noreferrer"
           className="hover ytdiv svgbottombar"
@@ -41,7 +41,7 @@ export default function Bottombar() {
         </a>
         <div className="divider"></div>
         <a
-          href="https://www.youtube.com/channel/UCLBeNVGJGc07l9v9K6p1xCQ"
+          href="https://github.com/Waradu"
           target="_blank"
           rel="noreferrer"
           className="hover ghdiv svgbottombar"
